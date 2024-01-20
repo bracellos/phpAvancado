@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permissões da manipulação de arquivos</title>
+</head>
+
+<body>
+    <h1>Permissões na criação de arquivos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <td></td>
+                <td><strong>MODO&nbsp;/&nbsp;DESCRIÇÃO</strong></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>‘w’</strong></td>
+                <td>Abre o arquivo para apenas escrita. <br>Assim coloca o ponteiro do arquivo no começo do arquivo e
+                    diminui(<em>trunca</em>) o tamanho do arquivo para zero. <br>Se o arquivo não existe, tenta criá-lo.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>‘w+’</strong></td>
+                <td>Abre o arquivo para leitura e escrita; <br>Primeiro coloca o ponteiro do arquivo no começo,
+                    diminuindo (truncando) o tamanho do arquivo para zero. <br>Se o arquivo não existe, tenta criá-lo.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>‘r’</strong></td>
+                <td>Abre o arquivo somente para leitura; coloca o ponteiro de escrita no começo do arquivo. <br>[Retorna
+                    um erro caso o arquivo não exista e não tenta cria-lo.]</td>
+            </tr>
+            <tr>
+                <td><strong>‘r+’</strong></td>
+                <td>Abre para leitura e escrita; coloca o ponteiro de escrita no começo do arquivo. [Retorna um erro
+                    caso o arquivo não exista e não tenta cria-lo.]</td>
+            </tr>
+            <tr>
+                <td><strong>‘a’</strong></td>
+                <td>Abre para somente para escrita somente; coloca o ponteiro do arquivo no final. Se o arquivo não
+                    existir, tenta criá-lo.</td>
+            </tr>
+            <tr>
+                <td><strong>‘a+’</strong></td>
+                <td>Abre o arquivo para leitura e escrita; coloca o ponteiro do arquivo no final. Se o arquivo não
+                    existir, tenta criá-lo.</td>
+            </tr>
+            <tr>
+                <td><strong>‘x’</strong></td>
+                <td>Cria e abre o arquivo para escrita somente; coloca o ponteiro no início do arquivo. <br>Se o arquivo
+                    já existe, a chamada a fopen() irá falhar, retornando FALSE, gerando um erro nível E_WARNING. Se o
+                    arquivo não existe, tenta criá-lo. <br>Esta opção é suportada no PHP 4.3.2 e posteriores, e somente
+                    funciona em arquivos locais.</td>
+            </tr>
+            <tr>
+                <td><strong>‘x+’</strong></td>
+                <td>Cria e abre um arquivo para escrita e leitura; coloca o ponteiro do arquivo no início. <br>Se o
+                    arquivo já existe, a chamada a fopen() irá falhar, retornando FALSE, gerando um erro nível
+                    E_WARNING. Se o arquivo não existe, tenta criá-lo. <br>Esta opção é suportada no PHP 4.3.2 e
+                    posteriores, e somente funciona em arquivos locais.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
